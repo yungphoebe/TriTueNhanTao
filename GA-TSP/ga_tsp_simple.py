@@ -13,7 +13,6 @@ import random
 import matplotlib.pyplot as plt
 import numpy as np
 from typing import List, Tuple
-import copy
 
 # Đặt seed để kết quả có thể tái lập
 random.seed(42)
@@ -119,7 +118,7 @@ def tao_route_ngau_nhien(danh_sach_city: List[City]) -> List[City]:
 def chon_loc(population: List[List[City]], so_luong_chon: int) -> List[List[City]]:
     """
     Chọn lọc các cá thể tốt nhất theo fitness
-    Sử dụng phương pháp Tournament Selection
+    Sử dụng phương pháp Elite Selection (chọn các cá thể tốt nhất)
     
     Args:
         population: Quần thể hiện tại
